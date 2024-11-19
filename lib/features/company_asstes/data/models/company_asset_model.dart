@@ -14,6 +14,21 @@ class CompanyAssetModel extends CompanyAssetEntity {
     super.sensorId,
   });
 
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'locationId': locationId,
+      'name': name,
+      'parentId': parentId,
+      'sensorType': sensorType,
+      'status': status,
+      'gatewayId': gatewayId,
+      'sensorId': sensorId,
+    };
+  }
+
+  String toJson() => json.encode(toMap());
+
   factory CompanyAssetModel.fromMap(Map<String, dynamic> map) {
     return CompanyAssetModel(
       id: map['id'],

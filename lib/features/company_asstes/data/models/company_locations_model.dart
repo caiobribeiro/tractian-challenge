@@ -16,6 +16,17 @@ class CompanyLocationsModel extends CompanyLocationsEntity {
       parentId: map['parentId'],
     );
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'parentId': parentId,
+    };
+  }
+
+  String toJson() => json.encode(toMap());
+
   factory CompanyLocationsModel.fromJson(String source) =>
       CompanyLocationsModel.fromMap(json.decode(source));
 }
