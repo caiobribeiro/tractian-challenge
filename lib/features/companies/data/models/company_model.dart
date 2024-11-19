@@ -15,8 +15,6 @@ class CompanyModel extends CompanyEntity {
     );
   }
 
-  String toJson() => json.encode(toMap());
-
   factory CompanyModel.fromJson(String source) =>
       CompanyModel.fromMap(json.decode(source));
 }
