@@ -5,6 +5,7 @@ import 'package:tractian_component_viewer/features/companies/data/repository/com
 import 'package:tractian_component_viewer/features/companies/domain/entities/company_entity.dart';
 import 'package:tractian_component_viewer/features/companies/domain/usecases/get_companies_usecase.dart';
 import 'package:tractian_component_viewer/features/companies/presentation/state_manager/companies_controller.dart';
+import 'package:tractian_component_viewer/features/company_asstes/presentation/pages/company_assets_page.dart';
 
 class CompaniesPage extends StatefulWidget {
   const CompaniesPage({super.key});
@@ -54,6 +55,14 @@ class _CompaniesPageState extends State<CompaniesPage> {
                     child: Column(
                       children: [
                         InkWell(
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CompanyAssetsPage(
+                                company: companies[index],
+                              ),
+                            ),
+                          ),
                           child: Container(
                             width: 400,
                             height: 100,
