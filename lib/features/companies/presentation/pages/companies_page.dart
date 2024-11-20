@@ -64,7 +64,7 @@ class _CompaniesPageState extends State<CompaniesPage> {
                             ),
                           ),
                           child: Container(
-                            width: 400,
+                            width: 350,
                             height: 100,
                             decoration: BoxDecoration(
                               color: const Color(0xFF2188FF),
